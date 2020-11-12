@@ -1,0 +1,33 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Course {
+    author: String
+    description: String
+    id: Int
+    title: String
+    topic: String
+    url: String
+}
+
+type Mutation {
+    addCourse(course: InputCourse): [Course]
+}
+
+type Query {
+    course(id: Int!): Course
+    courses(topic: String): [Course]
+    coursesFiltered(title: String): [Course]
+}
+
+input InputCourse {
+    author: String
+    description: String
+    title: String
+    topic: String
+    url: String
+}

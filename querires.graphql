@@ -1,0 +1,40 @@
+query tout {
+    courses {
+        id
+        title
+        author
+        description
+        topic
+        url
+    }
+}
+
+query un {
+    course(id: 1) {
+        id
+        title
+    }
+}
+
+query filtred {
+    coursesFiltered(title: "Node.js") {
+        id
+        title
+        author
+        description
+        topic
+        url
+    }
+}
+
+mutation add {
+    addCourse(course: {title: "Angular from scrach", author: "Mohammed KHELLAFI", description: "Build Angular app from scratch", topic: "Angular", url: "https://angular.io/tutorial"}) {
+        id
+        title
+        author
+        description
+        topic
+        url
+
+    }
+}
